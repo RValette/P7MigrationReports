@@ -1,9 +1,9 @@
 {
     "require-dev": {
-        "sstalle/php7cc": "^1.2"
+        "sstalle/php7cc": "^1.2",
+        "phan/phan": "^2.4"
     },
     "require": {
-        "phan/phan": "^2.4"
     },
     "scripts": {
         "php7cc": "\"vendor/bin/php7cc\" codebase -e php,php4,inc -o json > reports/php7cc.json",

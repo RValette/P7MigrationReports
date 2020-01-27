@@ -1,0 +1,28 @@
+{
+  "name": "reportbeforephp7migration",
+  "version": "1.0.0",
+  "description": "This package include PHP7CC and PHAN to check a codebase before php7 migration. It will export the result as JSON and display it in a web page",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "composer run-script check & webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RValette/reportBeforePhp7Migration.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RValette/reportBeforePhp7Migration/issues"
+  },
+  "homepage": "https://github.com/RValette/reportBeforePhp7Migration#readme",
+  "dependencies": {
+    "jsoneditor": "^8.3.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  }
+}
