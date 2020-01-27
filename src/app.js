@@ -28,7 +28,7 @@ function parseJson(php7cc, phan){
 }
 
 function parsePhp7cc(php7cc){
-
+    console.log(php7cc)
     php7cc.files.forEach(file => {
         let name = file.name.split("codebase\\")[1]
         let errors = []
@@ -51,7 +51,7 @@ function parsePhp7cc(php7cc){
 }
 
 function parsePhan(phan){
-
+    console.log(phan)
     phan.forEach(error => {
         let name = error.location.path.split("codebase\\")[1]
         let line = error.location.lines.begin
@@ -63,14 +63,14 @@ function parsePhan(phan){
             if(sameError.length === 0){
                 result[name].errors.push({
                     line: line,
-                    name: name
+                    text: error.description
                 })
             }
         }else{
             result[name] = [
                 {
                     line: line,
-                    name: name
+                    text: error.description
                 }
             ]
         }
