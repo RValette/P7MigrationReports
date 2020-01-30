@@ -58,12 +58,12 @@ section{
     border-radius: 4px;
     padding: 20px;
     color: #65a0c9;
+    border: 1px solid #ffffff;
     transition: 0.3s;
-    border: 1px solid #65a0c9;
 }
 #summary .summary-item .summary-item-container.hoverable:hover{
     cursor: pointer;
-    background-color: #ecf7ff;
+    border: 1px solid #65a0c9;
     transition: 0.3s;
 }
 #summary .summary-item .summary-item-container strong{
