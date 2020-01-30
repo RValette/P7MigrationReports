@@ -3,11 +3,65 @@
 <head>
     <!-- when using the mode "code", it's important to specify charset utf-8 -->
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
     <link href="node_modules/jsoneditor/dist/jsoneditor.min.css" rel="stylesheet" type="text/css">
     <script src="node_modules/jsoneditor/dist/jsoneditor.min.js"></script>
+    <script src="./src/functions.js"></script>
+    <link href="./assets/fonts/fontello-bc580cac/css/fontello.css" rel="stylesheet" type="text/css">
+    <link href="./style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div id="jsoneditor" style="width: 100; height: 100;"></div>
+    <div id="header">
+        <h1>P7 Migration Reports</h1>
+        <div id="menu">
+            <a href="https://github.com/RValette/P7MigrationReports"><i class="icon-github-circled"></i></a>
+        </div>
+    </div>
+    <div id="container">
+
+        <section id="summary">
+            <h2 class="icon-chart-pie"> Compte rendu des erreurs</h2>
+            <div id="summary-container">
+                <div id="unique-error" class="summary-item">
+                    <div class="summary-item-container hoverable" onclick="displayListeUniquesErrors()">
+                        <strong>Erreurs Uniques</strong><br/>
+                        <span class="summary-item-number"></span><br/>
+                    </div>
+                </div>
+               
+                <div id="total-files" class="summary-item">
+                    <div class="summary-item-container">
+                        <strong>Nombre de fichiers</strong><br/>
+                        <span class="summary-item-number"></span>
+                    </div>
+                </div>
+    
+                <div id="total-lines" class="summary-item">
+                    <div class="summary-item-container">
+                        <strong>Nombre de lignes</strong><br/>
+                        <span class="summary-item-number"></span>
+                    </div>
+                </div>
+    
+            </div>
+        </section>
+    
+        <section id="details">
+            <h2 class="icon-article-alt"> Détails</h2>
+            <div id="jsoneditor" style="width: 100; height: 50;"></div>
+        </section>
+       
+    </div>
+
+     
+    <div id="overlay">
+        <div id="overlay-container">
+            <i id="overlay-close" class="icon-cancel-circled" onclick="hideOverlay()"></i>
+            <h2>Liste des erreurs</h2>
+            <ul id="liste-errors-uniques"></ul>
+        </div>
+    </div>
+
     <script  type="module" src="src/app.js"></script>
 </body>
 </html>

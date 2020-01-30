@@ -1,0 +1,127 @@
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background-color: #fafafa;
+}
+h1{
+    font-size: 18px;
+    color: #65a0c9;
+    display: inline;
+    font-weight: 400;
+}
+h2{
+    color: #565656;
+    display: inline-block;
+    font-weight: 400;
+}
+#container{
+    margin: 50px;
+    margin-top: 25px;
+}
+#header{
+    height: 25px;
+    padding: 15px;
+    line-height: 25px;
+    background-color: white;
+    box-shadow: 8px 7px 6px #f8f8f8;
+    border-bottom: 1px solid #f2f2f2;
+}
+#menu{
+    float: right;
+}
+#menu a{
+    font-size: 30px;
+    text-decoration: none;
+    color: inherit;
+}
+section{
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-bottom: 30px;
+}
+#summary-container{
+    display: flex;
+    justify-content: center;
+}
+#summary .summary-item{
+    text-align: center;
+    margin: 15px;
+    font-size: 20px;
+    font-weight: 300;
+}
+#summary .summary-item .summary-item-container{
+    display: inline-block;
+    border-radius: 4px;
+    padding: 20px;
+    color: #65a0c9;
+    transition: 0.3s;
+    border: 1px solid #65a0c9;
+}
+#summary .summary-item .summary-item-container.hoverable:hover{
+    cursor: pointer;
+    background-color: #ecf7ff;
+    transition: 0.3s;
+}
+#summary .summary-item .summary-item-container strong{
+    font-weight: 300;
+}
+#summary .summary-item .summary-item-container .summary-item-number{
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 35px;
+    color: #5a5959;
+}
+.jsoneditor-menu{
+    background-color: #65a0c9;
+    border-bottom: 1px solid #65a0c9;
+}
+.jsoneditor{
+    border: 1px solid #d4d4d4;
+}
+.jsoneditor-field{
+    font-family: 'Roboto', sans-serif !important;
+}
+#overlay{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(41, 41, 41, 0.473);
+    top: 0;
+    z-index: 1000;
+}
+#overlay-container{
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    padding-top: 10px;
+    border-radius: 5px;
+    position: relative;
+    top: 50px;
+    overflow: auto;
+}
+#overlay-close{
+    position: sticky;
+    top: 0px;
+    right: 0px;
+    font-size: 25px;
+    transition: 0.2s;
+    float: right;
+}
+#overlay-close:hover{
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 26px;
+}
+#overlay ul li{
+    list-style: none;
+    display:block;
+    margin-bottom: 15px;
+}
