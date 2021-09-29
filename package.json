@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/RValette/reportBeforePhp7Migration#readme",
   "dependencies": {
-    "jsoneditor": "^8.3.0"
+    "jsoneditor": "^9.5.6"
   },
   "devDependencies": {
     "webpack": "^4.41.5",
